@@ -127,7 +127,8 @@ pub fn login(flash: Option<FlashMessage>) -> Template {
 pub fn login_user(user: UserId) -> Redirect {
     //    let mut context = HashMap::new();
     //    context.insert("username", user.0);
-    Redirect::to(&*("/user/".to_string() + &*user.0.to_string()))
+    // Redirect::to(&*("/user/".to_string() + &*user.0.to_string()))
+    Redirect::to("/")
     //    Template::render("index", &context)
 }
 

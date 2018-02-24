@@ -6,7 +6,7 @@ use model::pg::get_conn;
 use model::db::establish_connection;
 use controller::user::UserId;
 use chrono::prelude::*;
-use easy::string::Htmlentities;
+//use easy::string::Htmlentities;
 use regex::{Regex,Captures};
 use config::*;
 use CFG_DEFAULT;

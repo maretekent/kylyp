@@ -3,6 +3,12 @@
 #![feature(custom_derive)]
 #![feature(custom_attribute)]
 #![recursion_limit = "128"]
+#![feature(decl_macro)]
+#![feature(attr_literals)]
+#![allow(unused_imports)]
+#![allow(unused_variables)]
+#![allow(unused_attributes)]
+#![allow(non_snake_case)]
 
 #[macro_use]
 extern crate serde_derive;
@@ -16,7 +22,7 @@ extern crate rocket_contrib;
 extern crate serde_json;
 extern crate dotenv;
 extern crate chrono;
-extern crate easy;
+//extern crate easy;
 extern crate regex;
 extern crate config;
 
@@ -41,7 +47,6 @@ fn main() {
                                user::login_user,user::login,user::login_post,user::user_page_login,user::logout])
         .mount("/article",routes![article::article,article::add_comment,article::article_nouser,article::new,article::add_article])
         .attach(Template::fairing())
-        .catch(errors![home::not_found])
         .launch();
 }
 
